@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id = "box">
+        <div id = "animation">
+
+        </div>
+        </div> <br>
+   <button onclick = "move()" > click here</button> 
+
+
+<style>
+    #box {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: green;
+}
+#animation {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: red;
+}
+
+
+button{
+    
+    width: 150px;
+    height: 50px;
+    align : center;
+}
+    </style>
+
+
+
+<script>
+
+function move(){
+
+var pos = 0;
+var ele = document.getElementById("animation");
+
+var getMove = setInterval(frame , 5)
+
+function frame(){
+    if(pos == 350){
+        clearInterval(getMove)
+
+
+}
+
+else{
+    pos++;
+    ele.style.left = pos + "px";
+}
+
+
+}
+}
+
+
+
+    </script>
+
+
+</body>
+</html>
